@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import PrivateRoute from './components/PrivateRoute';
-import { useAuth } from './hooks/useAuth';
-import { auth } from './firebase';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import PrivateRoute from "./components/PrivateRoute";
+import { useAuth } from "./hooks/useAuth";
+import { auth } from "./firebase";
 
 function App() {
   const { currentUser } = useAuth();
@@ -14,20 +14,22 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 p-4">
         <header className="bg-white shadow-sm">
           <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <Link to="/" className="text-2xl font-bold text-blue-600">GeoCheck</Link>
+            <Link to="/" className="text-2xl font-bold text-blue-600">
+              GeoCheck
+            </Link>
             <div>
               {currentUser ? (
-                <button 
+                <button
                   onClick={handleLogout}
                   className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition duration-200"
                 >
                   Logout
                 </button>
               ) : (
-                <Link 
+                <Link
                   to="/login"
                   className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200"
                 >
