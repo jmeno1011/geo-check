@@ -145,7 +145,7 @@ function Home() {
                     />
                   </div>
                   {location && (
-                    <div className="p-3 rounded-lg border cursor-pointer transition-all duration-200 ">
+                    <div className="p-3 rounded-lg border transition-all duration-200 ">
                       <p className="text-sm font-medium text-gray-700">
                         현재 내 위치
                       </p>
@@ -155,7 +155,7 @@ function Home() {
                       </p>
                     </div>
                   )}
-                  <div className="p-3 rounded-lg border cursor-pointer transition-all duration-200 ">
+                  <div className="p-3 rounded-lg border transition-all duration-200 ">
                     <p className="text-sm font-medium text-gray-700">
                       선택된 위치
                     </p>
@@ -182,63 +182,6 @@ function Home() {
           </Card>
         </div>
       </div>
-
-      {/* <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-lg">
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">설정</h3>
-          <div className="space-y-4">
-            <div>
-              <label
-                htmlFor="radius"
-                className="block text-sm font-medium text-gray-700"
-              >
-                반경 (미터)
-              </label>
-              <input
-                type="number"
-                id="radius"
-                name="radius"
-                value={checkpoint.radius}
-                onChange={handleRadiusChange}
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-700">선택된 위치</p>
-              <p className="text-gray-600">
-                위도: {checkpoint.latitude.toFixed(4)}, 경도:{" "}
-                {checkpoint.longitude.toFixed(4)}
-              </p>
-            </div>
-            {location && (
-              <div>
-                <p className="text-sm font-medium text-gray-700">
-                  현재 내 위치
-                </p>
-                <p className="text-gray-600">
-                  위도: {location.latitude.toFixed(4)}, 경도:{" "}
-                  {location.longitude.toFixed(4)}
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">상태</h3>
-            <StatusDisplay message={message} />
-          </div>
-          <div className="mt-4">
-            <ActionButtons
-              onCheckIn={handleCheckIn}
-              onRecheckPosition={checkPosition}
-              isCheckInDisabled={!isInRange}
-              isChecked={checked}
-            />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

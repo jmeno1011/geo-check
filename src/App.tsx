@@ -17,8 +17,9 @@ function App() {
       <div className="min-h-screen bg-gray-50 p-4">
         <header className="bg-white shadow-sm">
           <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <Link to="/" className="text-2xl font-bold text-blue-600">
-              GeoCheck
+            <Link to="/" className="text-2xl font-bold text-blue-600 flex gap-1">
+            <img alt="LOGO" src="/Geo-Check.png" width={32} height={32} />
+              <span>GeoCheck</span>
             </Link>
             <div>
               {currentUser ? (
